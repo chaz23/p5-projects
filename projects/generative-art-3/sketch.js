@@ -16,9 +16,10 @@ function getColor() {
 function setup() {
   colorMode(HSB, 360, 100, 100);
   createCanvas(canvasLength, canvasLength);
-  background(40, 20, 100);
+  background(40, 30, 100);
   noLoop();
   randomSeed(123);
+  strokeWeight(1.3);
 }
 
 function draw() {
@@ -26,7 +27,7 @@ function draw() {
     for (let y = 0; y <= tilesPerSide; y++) {
       noFill();
       // strokeWeight(1);
-      // stroke("black");
+      // stroke("grey");
       square(x * squareLength, y * squareLength, squareLength);
       new Shape(x * squareLength, y * squareLength).render();
     }
