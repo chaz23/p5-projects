@@ -38,8 +38,8 @@ function draw() {
   let y2 = Array(canvasLength);
 
   for (let x = 0; x < canvasLength; x++) {
-    y1[x] = canvasLength / 1 + map(noise(offset), 0, 1, 0, 250) - x / 2;
-    y2[x] = canvasLength / 0.85 + map(noise(offset), 0, 1, 0, 550) - x / 1.6;
+    y1[x] = canvasLength / 2 + map(noise(offset), 0, 1, 0, 250) - x / 2;
+    y2[x] = canvasLength / 0.65 + map(noise(offset), 0, 1, 0, 550) - x / 3;
     offset += 0.0035;
   }
 
@@ -60,13 +60,13 @@ function draw() {
 
       Array.from(
         { length: 16 },
-        (d, i) => (colorPix[startIdx + i] = greyPix[startIdx + i])
+        (d, i) => (greyPix[startIdx + i] = colorPix[startIdx + i])
       );
     }
   }
 
   for (let i = 0; i < pixels.length; i++) {
-    pixels[i] = colorPix[i];
+    pixels[i] = greyPix[i];
   }
   updatePixels();
 }
