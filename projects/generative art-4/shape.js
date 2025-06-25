@@ -6,14 +6,61 @@ class Shape {
   }
 
   circle() {
-    // const radius;
-    strokeWeight(random([0, 20]));
     fill(getRandomColor());
-    circle(this.x, this.y, this.tileSize);
+    stroke(getRandomColor());
+    strokeWeight(random([0, 10]));
+
+    if (random([0, 1]) === 0) {
+      noFill();
+    } else {
+      noStroke();
+    }
+
+    const radius = random(this.tileSize * 0.5, this.tileSize * 0.95);
+    circle(this.x, this.y, radius);
+  }
+
+  rect() {
+    fill(getRandomColor());
+    stroke(getRandomColor());
+    strokeWeight(random([0, 10]));
+
+    if (random([0, 1]) === 0) {
+      noFill();
+    } else {
+      noStroke();
+    }
+
+    rect(this.x, this.y, this.tileSize, this.tileSize);
   }
 
   render() {
-    // square(this.x, this.y, this.tileSize);
-    this.circle();
+    fill(getRandomColor());
+    square(this.x, this.y, this.tileSize);
+    fill(getRandomColor());
+    stroke(getRandomColor());
+    noStroke();
+    strokeWeight(random([0, 10]));
+
+    // if (random([0, 1]) === 0) {
+    //   noFill();
+    // } else {
+    //   noStroke();
+    // }
+
+    const radius = random(this.tileSize * 0.5, this.tileSize * 0.9);
+
+    push();
+
+    beginClip();
+    square(this.x, this.y, this.tileSize);
+    endClip();
+
+    translate(
+      random([0, 0, 0, -this.tileSize / 2, this.tileSize / 2]),
+      random([0, 0, 0, -this.tileSize / 2, this.tileSize / 2])
+    );
+    circle(this.x, this.y, radius);
+    pop();
   }
 }

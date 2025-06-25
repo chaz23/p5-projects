@@ -10,7 +10,7 @@ function preload() {
   );
 }
 
-const tileSize = 70;
+const tileSize = 90;
 const numTiles = {
   x: Math.floor(windowWidth / tileSize),
   y: Math.floor(windowHeight / tileSize),
@@ -26,7 +26,7 @@ function setup() {
   background(0, 0, 10);
   noLoop();
 
-  colors = palettes[3];
+  colors = palettes[2];
 }
 
 function draw() {
@@ -35,4 +35,16 @@ function draw() {
       new Shape(i, j, tileSize).render();
     }
   }
+  // push();
+  // stroke("white");
+  // strokeWeight(3);
+  // noFill();
+  // rect(100, 100, 50, 30);
+  // pop();
+  // noStroke();
+  // beginClip();
+  // rect(100, 100, 30, 30);
+  // endClip();
+  // fill("green");
+  // rect(120, 100, 30, 30);
 }
