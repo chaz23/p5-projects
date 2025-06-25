@@ -26,7 +26,7 @@ function setup() {
   background(0, 0, 10);
   noLoop();
 
-  colors = palettes[2];
+  colors = palettes[3];
 }
 
 function draw() {
