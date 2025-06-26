@@ -10,7 +10,7 @@ function preload() {
   );
 }
 
-const tileSize = 90;
+const tileSize = 120;
 const numTiles = {
   x: Math.floor(windowWidth / tileSize),
   y: Math.floor(windowHeight / tileSize),
@@ -26,25 +26,17 @@ function setup() {
   background(0, 0, 10);
   noLoop();
 
-  colors = palettes[2];
+  colors = palettes[7];
 }
 
 function draw() {
   for (let i = 0; i < numTiles.x; i++) {
     for (let j = 0; j < numTiles.y; j++) {
-      new Shape(i, j, tileSize).render();
+      new Tile(i, j, tileSize).render();
     }
   }
-  // push();
-  // stroke("white");
-  // strokeWeight(3);
-  // noFill();
-  // rect(100, 100, 50, 30);
-  // pop();
-  // noStroke();
-  // beginClip();
-  // rect(100, 100, 30, 30);
-  // endClip();
-  // fill("green");
-  // rect(120, 100, 30, 30);
+}
+
+function keyTyped() {
+  if (key === "s") saveCanvas("generative-art-4.png");
 }
