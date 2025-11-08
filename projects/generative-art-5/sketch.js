@@ -4,6 +4,8 @@ let palettes;
 let colors;
 const getRandomColor = () => `#${colors[random(d3.range(0, colors.length))]}`;
 
+const size = windowWidth > windowHeight ? windowHeight : windowWidth;
+
 function preload() {
   palettes = loadJSON(
     "https://raw.githubusercontent.com/chaz23/p5-projects/refs/heads/main/palettes.json"
@@ -16,11 +18,10 @@ function setup() {
   colorMode(HSL, 360, 100, 100);
   rectMode(CENTER);
 
-  createCanvas(width, height);
-  background(0, 0, 10);
+  createCanvas(size, size);
   noLoop();
 }
 
 function draw() {
-  background(220);
+  background(200, 0, 10);
 }
