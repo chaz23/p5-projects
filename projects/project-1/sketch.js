@@ -1,8 +1,8 @@
 new p5();
 
-function keyPressed() {
-  if (key === "s") saveCanvas("project-1", "png");
-}
+// function keyPressed() {
+//   if (key === "s") saveCanvas("project-1", "png");
+// }
 
 const tilesPerSide = 50;
 

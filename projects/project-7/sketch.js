@@ -1,5 +1,9 @@
 new p5();
 
+function keyPressed() {
+  if (key === "s") saveCanvas("project-7", "png");
+}
+
 const tilesPerSide = 30;
 
 const canvasLength = windowWidth > windowHeight ? windowHeight : windowWidth;
@@ -60,7 +64,7 @@ function draw() {
 
       Array.from(
         { length: 16 },
-        (d, i) => (greyPix[startIdx + i] = colorPix[startIdx + i])
+        (d, i) => (greyPix[startIdx + i] = colorPix[startIdx + i]),
       );
     }
   }
