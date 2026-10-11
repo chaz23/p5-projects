@@ -53,7 +53,7 @@ function draw() {
     }
   }
 
-  const numCurves = 12000;
+  const numCurves = 120;
   let curves = Array(numCurves);
   for (let curve = 0; curve < numCurves; curve++) {
     curves[curve] = new Curve();
