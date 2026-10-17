@@ -375,3 +375,7 @@ class Temple {
     this.drawSlab(200, 60, 30);
   }
 }
+
+function keyTyped() {
+  if (key === "s") saveCanvas("project-8.png");
+}

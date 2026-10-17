@@ -18,7 +18,7 @@ function draw() {
   background("white");
   strokeWeight(1);
 
-  const numLines = 1000;
+  const numLines = 100;
   for (let i = 0; i < 200; i++) {
     const r = 50 + i * 4;
     const rMin = r - i;
@@ -27,3 +27,7 @@ function draw() {
     new Ring(x0, y0, rMin, rMax, 3).render();
   }
 }
+
+// function keyTyped() {
+//   if (key === "s") saveCanvas("project-4.png");
+// }

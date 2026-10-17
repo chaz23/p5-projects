@@ -10,7 +10,7 @@ function preload() {
   );
 }
 
-const tileSize = 120;
+const tileSize = 40;
 const numTiles = {
   x: Math.floor(windowWidth / tileSize),
   y: Math.floor(windowHeight / tileSize),
@@ -38,5 +38,5 @@ function draw() {
 }
 
 // function keyTyped() {
-//   if (key === "s") saveCanvas("generative-art-4.png");
+//   if (key === "s") saveCanvas("project-2.png");
 // }

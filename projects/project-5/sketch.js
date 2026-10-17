@@ -48,3 +48,7 @@ function draw() {
 //     saveGif("background-animation.gif", 5);
 //   }
 // }
+
+// function keyTyped() {
+//   if (key === "s") saveCanvas("project-5.png");
+// }

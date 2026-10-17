@@ -35,18 +35,18 @@ function setup() {
 }
 
 function draw() {
-  // push();
-  // for (let i = 0; i < xNumTiles; i++) {
-  //   for (let j = 0; j < yNumTiles; j++) {
-  //     const t = new Tile(
-  //       xTileStart + i * tileWidth,
-  //       yTileStart + j * tileWidth,
-  //       tileWidth
-  //     );
-  //     t.render();
-  //   }
-  // }
-  // pop();
+  push();
+  for (let i = 0; i < xNumTiles; i++) {
+    for (let j = 0; j < yNumTiles; j++) {
+      const t = new Tile(
+        xTileStart + i * tileWidth,
+        yTileStart + j * tileWidth,
+        tileWidth,
+      );
+      t.render();
+    }
+  }
+  pop();
 
   const flower = [{ numPetals: 10 }, { numPetals: 8 }, { numPetals: 8 }];
 
@@ -62,3 +62,7 @@ function draw() {
     }).render();
   }
 }
+
+// function keyTyped() {
+//   if (key === "s") saveCanvas("project-3.png");
+// }

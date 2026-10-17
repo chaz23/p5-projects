@@ -66,3 +66,7 @@ function draw() {
     rect(0, 0, r);
   }
 }
+
+// function keyTyped() {
+//   if (key === "s") saveCanvas("project-6.png");
+// }
